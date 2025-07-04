@@ -1,14 +1,13 @@
 name: First Workflow
 
-run-name: DEBUG | ${{inputs.debug}}
+
 
 on: 
  workflow_dispatch:
   inputs: 
-   debug:
-    type: boolean
-    default: false
-
+   TARGET_ENV:
+    type: environment
+    default: dev
 
   
 jobs:
