@@ -15,6 +15,9 @@ jobs:
        - ubuntu-latest
        - windows-latest
      java-version: [25, 17 , 21]  
+     include: 
+       - java-version: 25
+         allow_fail: false
   continue-on-error:  ${{matrix.java-version}}
   runs-on: ${{matrix.os}}
   steps:
