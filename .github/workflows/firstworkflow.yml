@@ -1,6 +1,12 @@
 name: First Workflow
 
-on: workflow_dispatch
+
+
+on: 
+ pull_request:
+   types:
+    - synchronize
+
 
 jobs:
  echo-ubuntu-runner:
