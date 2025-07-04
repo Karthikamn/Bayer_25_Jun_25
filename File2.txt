@@ -1,0 +1,4 @@
+This is line to be added
+This line to be kept
+New line added
+delete line added
