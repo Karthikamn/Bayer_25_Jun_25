@@ -17,7 +17,7 @@ jobs:
      java-version: [25, 17 , 21]  
      include: 
        - java-version: 25
-         allow_fail: false
+         allow_fail: true
   continue-on-error:  ${{matrix.java-version}}
   runs-on: ${{matrix.os}}
   steps:
