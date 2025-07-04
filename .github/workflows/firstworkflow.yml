@@ -3,9 +3,7 @@ name: First Workflow
 
 
 on: 
- pull_request:
-   types:
-    - synchronize
+ wokrflow_dispatch
 
 
 jobs:
@@ -20,4 +18,4 @@ jobs:
         java-version: '17'
         distribution: 'microsoft'
    - name: Check Java installed
-     run: echo java --version
+     run: echo '${{github.actor}}'
