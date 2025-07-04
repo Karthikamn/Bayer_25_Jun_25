@@ -29,5 +29,6 @@ jobs:
  deploy:  
   needs: build    
   runs-on: ubuntu-latest  
+  environment: ${{inputs.TARGET_ENV}}
   steps:
-  - run: echo 'deployment after build' 
+  - run: echo '${{vars.TARGET_VAR}}' 
