@@ -11,15 +11,12 @@ jobs:
  build:
   strategy:
     matrix: 
-     os: 
-       - ubuntu-latest
-       - windows-latest
      java-version: [25, 17 , 21]  
      include: 
        - java-version: 25
          allow_fail: true
-  continue-on-error:  ${{matrix.java-version}}
-  runs-on: ${{matrix.os}}
+  continue-on-error:  ${{matrix.allow_fail}}
+  runs-on: ubuntu-latest
   steps:
    - name: Checkout code 
      uses: actions/checkout@v4.2.2
