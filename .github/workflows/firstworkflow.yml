@@ -10,12 +10,10 @@ on:
 jobs:
  build:
   strategy:
-    matrix: 
+   fail-fast: false
+   matrix: 
      java-version: [25, 17 , 21]  
-     include: 
-       - java-version: 25
-         allow_fail: true
-  continue-on-error:  ${{matrix.allow_fail}}
+  continue-on-error: true   
   runs-on: ubuntu-latest
   steps:
    - name: Checkout code 
