@@ -18,4 +18,4 @@ jobs:
         java-version: '17'
         distribution: 'microsoft'
    - name: Check Java installed
-     run: echo '${{github.actor}}'
+     run: echo '{{github.event_name}}'
