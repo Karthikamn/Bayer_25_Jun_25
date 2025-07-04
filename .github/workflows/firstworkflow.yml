@@ -3,7 +3,7 @@ name: First Workflow
 
 
 on: 
- wokrflow_dispatch
+ workflow_dispatch
 
 
 jobs:
